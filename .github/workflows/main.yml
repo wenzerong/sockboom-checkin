@@ -29,11 +29,11 @@ jobs:
         EMAIL: ${{ secrets.EMAIL }}
         PASSWORD: ${{ secrets.PASSWORD }}
       run: | 
-        echo -en $(curl -c cookie.txt -X POST 'https://sockboom.link/auth/login' -d email="$EMAIL" -d passwd="$PASSWORD")
-    - name: Chick in Api #签到
+        echo -en $(curl -c cookie.txt -X POST 'https://sockboom.id/auth/login' -d email="$EMAIL" -d passwd="$PASSWORD")
+    - name: checkin in Api #签到
       run: |
         echo -n `date +%Y-%m-%d\ %H:%M:%S`\ -\ >> ./run.log 
-        echo -e $(curl -b cookie.txt -X POST 'https://sockboom.link/user/checkin')  >> ./run.log
+        echo -e $(curl -b cookie.txt -X POST 'https://sockboom.id/user/checkin')  >> ./run.log
         tail run.log #避免日志上传失败丢失日志
     - name: Commit #上传日志到仓库
       env:
