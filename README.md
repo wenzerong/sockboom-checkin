@@ -10,7 +10,3 @@
   - SockBoom密码
 
 > 最后必须要自己 `star` 一下才会开始运行，测试的的时候只要点两次就好了（取消star，然后再star）
-
-## 参考链接
-
-[yml文件配置](https://github.com/moreant/auto-checkin-biliob)
