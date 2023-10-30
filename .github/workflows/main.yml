@@ -20,13 +20,13 @@ jobs:
         timezone: Asia/Shanghai 
     - name: Checkout
       uses: actions/checkout@master
-    - name: login in APi #Api调用
+    - name: Login in APi #Api调用
       env:
         EMAIL: ${{ secrets.EMAIL }}
         PASSWORD: ${{ secrets.PASSWORD }}
       run: | 
         curl -s -c cookie.txt -X POST "${DOMAIN}/auth/login" -d email="${EMAIL}" -d passwd="${PASSWORD}"
-    - name: checkin in Api #签到
+    - name: Checkin in Api #签到
       run: |
         dateTime=`date +%Y-%m-%d\ %H:%M:%S`
         response=$(curl -b cookie.txt -X POST "${DOMAIN}/user/checkin")
