@@ -35,8 +35,8 @@ jobs:
         tail run.log #避免日志上传失败丢失日志
     - name: Commit #上传日志到仓库
       env:
-       NAME: QYC-Unity
-       EMAIL: 168906430@qq.com
+       NAME: abc97393094
+       EMAIL: 97393094@qq.com
       run: |
         git config --global user.name "$NAME"
         git config --global user.email "$EMAIL"
